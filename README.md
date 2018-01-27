@@ -90,3 +90,29 @@ $ elm-reactor
 - The central thread updates the score and writes an `AssignScore` client message to all client channels.
     - Each client thread reads this `AssignScore` message and writes to their WebSocket connections.
         - The Elm applications each receive a `WSReceiveMessage` message in their `update` function.
+
+### What is >>=
+
+- this is the same as |> in Elm, but for IO actions, os
+    
+    ```
+    f >>= g
+    ```
+  
+  is the same as
+    
+    ```
+    do
+       x <- f
+       g x'
+    ```
+    
+  if `g` doesn't have a return value, or 
+    
+    ```
+    do
+       x <- f
+       return (g x')
+    ```
+  
+  if it does have a return value
