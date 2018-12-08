@@ -1,5 +1,7 @@
 # elm-haskell-stm
 
+## This fork will not be updated for Elm 0.19.  We have a forthcoming project which will be easier for beginners.
+
 ## Running the Haskell back-end
 
 (`$` character denotes the beginning of a prompt, it should not be included.)
